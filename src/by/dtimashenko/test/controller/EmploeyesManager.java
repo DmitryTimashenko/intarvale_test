@@ -60,6 +60,11 @@ public final class EmploeyesManager {
 
         return count();
     }
+    
+    public void removeEmployee(int employeeId) {
+        employeeMap.remove(employeeId);
+        saveToFile();
+    }
 
     public void saveToFile() {
         Path path = Paths.get(EMPLOYEES_DATA_FILE);

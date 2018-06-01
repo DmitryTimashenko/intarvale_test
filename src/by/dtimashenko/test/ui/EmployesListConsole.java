@@ -17,7 +17,7 @@ public class EmployesListConsole extends BaseConsole {
 
     protected ArrayList<Employee> employeesList;
     protected int order = EmploeyesManager.ORDER_BY_ID;
-    protected String leftAlignFormat = "| %-4d | %-30s | %-10s | %n";
+    protected String leftAlignFormat = "| %-4d | %-30d | %-10d | %n";
 
     public EmployesListConsole() {
         menu = new String[]{
@@ -38,6 +38,7 @@ public class EmployesListConsole extends BaseConsole {
                 addEmployee();
                 break;
             case 2:
+                removeEmployee();
                 break;
             case 4:
                 order = EmploeyesManager.ORDER_BY_FULLNAME;
@@ -70,7 +71,7 @@ public class EmployesListConsole extends BaseConsole {
         System.out.println();
 
     }
-    
+
     private void addEmployee() {
         System.out.println("Enter data file path: ");
         String filePath = sc.nextLine();
@@ -86,8 +87,14 @@ public class EmployesListConsole extends BaseConsole {
 
     }
 
+    private void removeEmployee() {
+        System.out.println("Enter Employee Id: ");
+        int employeeId = Integer.parseInt(sc.nextLine());
+        employeeManager.removeEmployee(employeeId);
+    }
+
     protected void editEmployeeType() {
-        System.out.print("-= EDIT EMPLOYEE TYPE =-");
+        System.out.println("-= EDIT EMPLOYEE TYPE =-");
         System.out.println("Enter Employee ID: ");
 
         int userId = readInt(0, employeeManager.count());
