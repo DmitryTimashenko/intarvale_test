@@ -17,7 +17,7 @@ public class EmployesListConsole extends BaseConsole {
 
     protected ArrayList<Employee> employeesList;
     protected int order = EmploeyesManager.ORDER_BY_ID;
-    protected String leftAlignFormat = "| %-4d | %-30d | %-10d | %n";
+    protected String leftAlignFormat = "| %-4d | %-30s | %-20s | %n";
 
     public EmployesListConsole() {
         menu = new String[]{
@@ -40,15 +40,15 @@ public class EmployesListConsole extends BaseConsole {
             case 2:
                 removeEmployee();
                 break;
-            case 4:
+            case 3:
                 order = EmploeyesManager.ORDER_BY_FULLNAME;
                 System.out.println("Order by Name");
                 break;
-            case 5:
+            case 4:
                 order = EmploeyesManager.ORDER_BY_EMPLOYEE_DATE;
                 System.out.println("Order by date");
                 break;
-            case 6:
+            case 5:
                 editEmployeeType();
                 break;
         }
