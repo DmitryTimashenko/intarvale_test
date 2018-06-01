@@ -11,8 +11,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -107,6 +109,13 @@ public final class EmploeyesManager {
         Comparator<Employee> comparator = getComparator(order);
         list.sort(comparator);
         return list;
+    }
+    
+    public ArrayList<Employee> getManagers() {
+        ArrayList<Employee> list = new ArrayList<>(employeeMap.values());
+        List<Employee> result = list.stream().filter(employee -> employee.getTypeId() == 5)
+                .collect(Collectors.toList());
+        return (ArrayList<Employee>) result;
     }
 
     protected Comparator<Employee> getComparator(int order) {
