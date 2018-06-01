@@ -1,0 +1,5 @@
+Id=0,Title=Regular,Descriptioin=Regular Employee
+Id=1,Title=Manager,Descriptioin=Manager
+Id=2,Title=Other,Descriptioin=Product owner
+Id=3,Title=Other,Descriptioin=Mega Boss
+Id=4,Title=Other,Descriptioin=Secretary

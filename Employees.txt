@@ -1,0 +1,5 @@
+Id=1,FullName=Dmitry Timashenko,BirthDate=1983 10 17,EmploymentDate=2019 05 30,TypeId=0,ManagerId=0
+Id=3,FullName=Artem Yasinsky,BirthDate=1994 05 05,EmploymentDate=2019 05 30,TypeId=4,ManagerId=0
+Id=4,FullName=Nataliya Korotkaya,BirthDate=1984 04 04,EmploymentDate=2019 05 30,TypeId=0,ManagerId=0
+Id=5,FullName=Aleksandr Babich,BirthDate=1994 05 05,EmploymentDate=2019 05 30,TypeId=0,ManagerId=0
+Id=6,FullName=Elena Klimova,BirthDate=1986 03 18,EmploymentDate=2018 09 01,TypeId=0,ManagerId=0
